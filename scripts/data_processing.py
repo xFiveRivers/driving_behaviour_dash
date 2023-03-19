@@ -19,4 +19,4 @@ for count, file in enumerate(raw_files):
                         )
     df = df.set_index('Time (s)')
     file_name = f'Trip_{count+1}'
-    df.to_csv(processed_path+file_name)
+    df.to_csv(processed_path+file_name+'.csv')
