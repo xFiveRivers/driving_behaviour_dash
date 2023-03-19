@@ -8,7 +8,6 @@ raw_files = glob.glob('../data/raw/*.csv')
 # Path to save the processed files
 processed_path = '../data/processed/'
 
-
 # Loop over raw files, add column names, save to new directory
 for count, file in enumerate(raw_files):
     df = pd.read_csv(file,
@@ -18,5 +17,8 @@ for count, file in enumerate(raw_files):
                                 'Driver Wellbeing', 'Driver Rush'],
                         )
     df = df.set_index('Time (s)')
-    file_name = f'Trip_{count+1}'
+    if count+1 < 10:
+        file_name = f'Trip_0{count+1}'
+    else:
+        file_name = f'Trip_{count+1}'
     df.to_csv(processed_path+file_name+'.csv')
