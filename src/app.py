@@ -6,7 +6,6 @@ import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import load_figure_template
 import pandas as pd
 import os
-import glob
 import altair as alt
 alt.data_transformers.enable('data_server')
 alt.renderers.set_embed_options(theme='dark')
@@ -16,10 +15,11 @@ alt.renderers.set_embed_options(theme='dark')
 # ======================================================= #
 # app = dash.Dash(__name__)
 app = dash.Dash(external_stylesheets=[dbc.themes.SLATE])
+server = app.server
 load_figure_template('SLATE')
 app.title = 'Driving Diagnostics Dash (TripleD)'
 
-data_path = 'data/processed/'
+data_path = '../data/processed/'
 csv_files = [f for f in os.listdir(data_path) if f.endswith('.csv')]
 
 # ======================================================= #
