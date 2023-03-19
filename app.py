@@ -29,7 +29,7 @@ def concat_df(selected_trips, data_path=data_path):
     dfs = []
     for trip in selected_trips:
         df = pd.read_csv(data_path+trip)
-        df['trip_id'] = trip.replace('.csv', '')
+        df['Trip ID'] = trip.replace('.csv', '')
         dfs.append(df)
     return pd.concat(dfs, axis=0)
 
@@ -100,8 +100,8 @@ def plot_speed(selected_trips):
     chart = alt.Chart(df).mark_line().encode(
         x = 'Time (s)',
         y = 'Speed (m/s)',
-        color = 'trip_id',
-        tooltip = ['Speed (m/s)', 'Time (s)', 'trip_id']
+        color = 'Trip ID',
+        tooltip = ['Speed (m/s)', 'Time (s)', 'Trip ID']
     ).interactive()
     return chart.to_html()
 
@@ -113,8 +113,8 @@ def plot_gear(selected_trips):
     chart = alt.Chart(df).mark_line().encode(
         x = 'Time (s)',
         y = 'Lateral Acc (m/s^2)',
-        color = 'trip_id',
-        tooltip = ['Lateral Acc (m/s^2)', 'Time (s)', 'trip_id']
+        color = 'Trip ID',
+        tooltip = ['Lateral Acc (m/s^2)', 'Time (s)', 'Trip ID']
     ).interactive()
     return chart.to_html()
 
