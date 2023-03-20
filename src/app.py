@@ -4,6 +4,7 @@
 from dash import dash, html, dcc, Input, Output
 import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import load_figure_template
+from pathlib import Path
 import pandas as pd
 import os
 import altair as alt
@@ -19,7 +20,7 @@ server = app.server
 load_figure_template('SLATE')
 app.title = 'Driving Diagnostics Dash (TripleD)'
 
-data_path = 'data/processed/'
+data_path = os.path.join(Path(__file__).resolve().parent, '../data/processed/')
 csv_files = [f for f in os.listdir(data_path) if f.endswith('.csv')]
 
 # ======================================================= #
