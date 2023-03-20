@@ -14,8 +14,8 @@ alt.renderers.set_embed_options(theme='dark')
 # ======================================================= #
 # ========================SETUP========================== #
 # ======================================================= #
-# app = dash.Dash(__name__)
-app = dash.Dash(external_stylesheets=[dbc.themes.SLATE])
+app = dash.Dash(__name__, 
+                 external_stylesheets=[dbc.themes.SLATE])
 server = app.server
 load_figure_template('SLATE')
 app.title = 'Driving Diagnostics Dash (TripleD)'
