@@ -20,7 +20,8 @@ server = app.server
 load_figure_template('SLATE')
 app.title = 'Driving Diagnostics Dash (TripleD)'
 
-data_path = os.path.join(Path(__file__).resolve().parent, '../data/processed/')
+# data_path = os.path.join(Path(__file__).resolve().parent, '../data/processed/')
+data_path = 'data/processed/'
 csv_files = [f for f in os.listdir(data_path) if f.endswith('.csv')]
 
 # ======================================================= #
