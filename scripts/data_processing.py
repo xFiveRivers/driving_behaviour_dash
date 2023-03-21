@@ -3,15 +3,16 @@ import os
 import glob
 
 # Get raw file names
-raw_files = glob.glob('../data/raw/*.csv')
+raw_files = glob.glob('data/raw/*.csv')
 
 # Path to save the processed files
-processed_path = '../data/processed/'
+processed_path = 'data/processed/'
 
 # Loop over raw files, add column names, save to new directory
 for count, file in enumerate(raw_files):
     df = pd.read_csv(file,
-                     nrows=50000,
+                     nrows=1250,
+                     skiprows=10000,
                      names = ['Time (s)', 'Speed (m/s)', 'Gear', 'Engine Load (% of Max Power)', 'Total Acc (m/s^2)', 
                               'Engine RPM', 'Pitch (deg)', 'Lateral Acc (m/s^2)', 'Passenger Count', 'Load Ind', 
                               'AC Level', 'Window Opening', 'Radio Volume', 'Rain Intensity', 'Visibility', 
