@@ -1,8 +1,9 @@
 # **Driving Diagnostics Dash (TripleD)**
 ## _Making Sure it's Working How it's Supposed to._
+
 ## Welcome!
 
-Thanks for taking the time to look into the `TripleD` dashboard repository. This file is the primary source of information about how to navigate the dashboard and the repo. Please scroll on to read more about the project or click the links to jump to different sections.
+Thanks for taking the time to look into the `TripleD` dashboard repository. This file is the primary source of information about how to navigate the dashboard and the repo. Please scroll on to read more about the project. You can find the deployed app [here](https://driving-diagnostics-dash-tripled.onrender.com/). Please note that due to the size of the data, the dashboard will take a very long time to update.
 
 ## **Who am I?**
 
@@ -20,6 +21,13 @@ For race enthusiasts, I know that vehicle speeds and accelerations are extremely
 For those who are tinkering DIY, I know that engine diagostics can be important after applying tunes to the vehicle. For this I have also created two plots. The first being a Engine Speed verus Transmission Gear plot to show the different shift speeds. The second is the Engine Load versus Engine Speed to see the capabilities of tune through different scenarios.
 
 For now, there is a single widget at the top that will allow you to select which trips you would like to plot. For example if you want to plot a test run with a high A/F ratio on top of a test run with a low A/F ratio, you can compare results on a single set of plots.
+
+Below you can see a screenshot of the full working app. However for the sake of the project, the data has been trimmed down and reduced for ease of deployment.
+
+![Working Screenshot](img/full_app_screenshot.jpeg)
+
+## Attributions
+The data has been collected and adapted from [here](https://www.kaggle.com/datasets/vitorrf/cartripsdatamining)
 
 ## **License**
 `TripleD` was created by Vikram Grewal and is licensed under the terms of the MIT License.
